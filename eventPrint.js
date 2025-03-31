@@ -1,23 +1,3 @@
-/*document.addEventListener("DOMContentLoaded", function () {
-    console.log("Event tracking initialized.");
-
-    // Function to log event details
-    function logEvent(event, eventType) {
-        const timestamp = new Date().toISOString();
-        const eventObject = event.target.tagName.toLowerCase();
-
-        console.log(`${timestamp} , ${eventType} , ${eventObject}`);
-    }
-
-    // Track clicks on all elements
-    document.addEventListener("click", function (event) {
-        logEvent(event, "click");
-    });
-
-    // Track when the page is viewed
-    logEvent({ target: document.body }, "view");
-});*/
-
 document.addEventListener("DOMContentLoaded", function () {
     function logEvent(event, type) {
         console.log(`${new Date().toISOString()} , ${type} , ${event.target.tagName.toLowerCase()}`);
