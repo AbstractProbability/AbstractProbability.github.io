@@ -11,14 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Track page views (triggered when the page loads)
     console.log(`${new Date().toISOString()} , page_view , document`);
 
-    // Track hover events only on links and images
+    // Track hover events for all elements
     document.addEventListener("mouseover", function (event) {
-        if (event.target.tagName.toLowerCase() === "a" || event.target.tagName.toLowerCase() === "img") {
-            logEvent(event, "hover");
-        }
+        logEvent(event, "hover");
     });
 });
-
 
 function analyzeText() {
     const text = document.getElementById("textInput").value;
